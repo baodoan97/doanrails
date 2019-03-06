@@ -19,3 +19,10 @@
 //= require_imagezoom
 //= require_jquery.flexslider
 //= require_simpleCart.min
+// $( document ).on('turbolinks:load', function() {
+
+//   function closeForm() {
+//    alert("x");
+// }
+
+// });
