@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get 'sessions/new'
   get 'singles/single'
   get 'users/signup'
-  #resources :products
+  resources :products
 end
