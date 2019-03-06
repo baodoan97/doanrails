@@ -3,6 +3,12 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.5.3'
 gem 'bcrypt', '~> 3.1.7'
+gem 'jquery-rails'
+#Bootstrap 4
+gem 'bootstrap3-rails', '~> 3.2'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.4'
+gem 'axlsx', git: 'https://github.com/randym/axlsx.git', ref: 'c8ac844'
+gem 'axlsx_rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2'
 # Use sqlite3 as the database for Active Record
