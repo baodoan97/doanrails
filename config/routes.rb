@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   get 'singles/single'
   get 'users/signup'
   resources :products
-  asddsadasdaasdadadas
+  asddsadasdaasdadadasasdasd
 end
