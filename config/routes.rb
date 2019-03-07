@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get 'singles/single'
   get 'users/signup'
   resources :products
+  delete 'images', to:  'products#destroyimage'
   
 end
