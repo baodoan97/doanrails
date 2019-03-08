@@ -1,0 +1,41 @@
+<div class="reg-form">
+    <div class="container">
+        <div class="reg">
+            <h3>Register Now</h3>
+            <p>Welcome, please enter the following details to continue.</p>
+            <p>If you have previously registered with us, <a href="#">click here</a></p>
+            <%= form_for @user do |f| %>
+                <div class="form-group">
+                    <%= f.label :firstname, class:"h4" %> <br/>
+                    <%= f.text_field :firstname, class:"form-control", placeholder:"Enter email" %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :lastname, class:"h4" %> <br/>
+                    <%= f.text_field :lastname, class:"form-control", placeholder:"Enter email" %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :email, class:"h4" %> <br/>
+                    <%= f.email_field :email, class:"form-control", placeholder:"Enter email" %>
+                </div>
+                <div class="form-group ">
+                    <%= f.label :password, class:"h4" %> <br/>
+                    <%= f.password_field :password, class:"form-control", placeholder:"Enter password", autocomplete: "off" %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :phone, class:"h4" %> <br/>
+                    <%= f.text_field :phone, class:"form-control", placeholder:"Enter email" %>
+                </div>
+                <div class="form-group">
+                    <%= f.label :address, class:"h4" %> <br/>
+                    <%= f.text_field :address, class:"form-control", placeholder:"Enter email" %>
+                </div>
+                 <div class="form-group">
+                    <%= f.label :gender, class:"h4" %> <br/>
+                    <%= f.select :gender, options_for_select([['Female',0],['Male',1]]), {}, { :class => "form-control" } %>
+                </div>
+                    <%= f.submit 'Sign Up', class:"btn btn-dark ml-auto signup" %>
+            <% end %>
+        </div>
+    </div>
+</div>
+

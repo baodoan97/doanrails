@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
-  root 'homes#index'
-  get 'checkouts/checkout'
-  get 'contacts/contact'
-  get 'products/product'
-  get 'sessions/new'
-  get 'singles/single'
+  #user
+  root 'pages#home'
+  get 'contact', to: 'pages#contact'
+   get 'login', to: 'sessions#new'
+  get 'signup', to: 'users#new'
   get 'users/signup'
+
+  resources :categories, only: [:show]
+  resources :users, except: [:destroy, :index]
   resources :products
 
   delete 'images', to:  'products#destroyimage'

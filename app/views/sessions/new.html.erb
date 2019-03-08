@@ -1,47 +1,30 @@
-<div class="head-bread">
+<div class="login">
     <div class="container">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="register.html">LOGIN</a></li>
-            <li class="active">REGISTER</li>
-        </ol>
-    </div>
-</div>
-<div class="reg-form">
-    <div class="container">
-        <div class="reg">
-            <h3>Register Now</h3>
-            <p>Welcome, please enter the following details to continue.</p>
-            <p>If you have previously registered with us, <a href="#">click here</a></p>
-            <form>
-                <ul>
-                    <li class="text-info">First Name: </li>
-                    <li><input type="text" value=""></li>
-                </ul>
-                <ul>
-                    <li class="text-info">Last Name: </li>
-                    <li><input type="text" value=""></li>
-                </ul>
-                <ul>
-                    <li class="text-info">Email: </li>
-                    <li><input type="text" value=""></li>
-                </ul>
-                <ul>
-                    <li class="text-info">Password: </li>
-                    <li><input type="password" value=""></li>
-                </ul>
-                <ul>
-                    <li class="text-info">Re-enter Password:</li>
-                    <li><input type="password" value=""></li>
-                </ul>
-                <ul>
-                    <li class="text-info">Mobile Number:</li>
-                    <li><input type="text" value=""></li>
-                </ul>
-                <input type="submit" value="Register Now">
-                <p class="click">By clicking this button, you are agree to my <a href="#">Policy Terms and
-                        Conditions.</a></p>
-            </form>
+        <div class="login-grids">
+            <div class="col-md-6 log">
+                <h3>Login</h3>
+                <div class="strip"></div>
+                <p>Welcome, please enter the following to continue.</p>
+                <p>If you have previously Login with us, <a href="#">Click Here</a></p>
+                <form>
+                    <h5>User Name:</h5>
+                    <input type="text" value="">
+                    <h5>Password:</h5>
+                    <input type="password" value=""><br>
+                    <input type="submit" value="Login">
+
+                </form>
+                <a href="#">Forgot Password ?</a>
+            </div>
+            <div class="col-md-6 login-right">
+                <h3>New Registration</h3>
+                <div class="strip"></div>
+                <p>By creating an account with our store, you will be able to move through the checkout process faster,
+                    store multiple shipping addresses, view and track your orders in your account and more.</p>
+                <%= link_to 'Create An Account', signup_path, class: "button" %>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
+
