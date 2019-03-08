@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    before_action :set_product , only: [:edit]
+    before_action :set_product , only: [:edit,:update]
 
     def new
     @product = Product.new
@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
         	 "price" => product_params[:price],
         	 "quantity" => product_params[:quantity],
         	 "description" => product_params[:description],
-        	 "level" => product_params[:size].to_i
+        	 "size" => product_params[:size].to_i
          }
 		  @product = Product.new
 		  @product.category = Category.find(product_params[:category].to_i)
@@ -31,35 +31,29 @@ class ProductsController < ApplicationController
 	end
 
 	def edit
-		#  paTASK = {
-  #       	 "taskname" => task_params[:taskname],
-  #       	 "content" => task_params[:content],
-  #       	 "date" => task_params[:date],
-  #       	 "level" => task_params[:level].to_i
-  #            }
-            
-  #            if !!params[:task][:images]
-  #             @task.images.attach(params[:task][:images])
-  #            end
-		# if @task.update(paTASK)   
-  #           j=1
-            
-	 #        	while (j<task_params[:user_task_ids].count) do
-	        		
-		#         		@user = User.find(task_params[:user_task_ids][j].to_i)
-		# 				@user.tasks << @task
-		# 			j += 1
-	 #        	end
-           
-            	
-		# 	flash[:success] = "Task was updated"
-		# 	redirect_to task_path(@task)
-		# else
-		# 	render 'edit'
-		# end
-
-
+		
 	end
+
+    def update
+       paPRODUCT = {
+        	 "name" => product_params[:name],
+        	 "price" => product_params[:price],
+        	 "quantity" => product_params[:quantity],
+        	 "description" => product_params[:description],
+        	 "size" => product_params[:size].to_i
+         }
+         @product.category = Category.find(product_params[:category].to_i)
+      	if params[:product][:images] != nil 
+       		@product.images.attach(params[:product][:images])
+        end
+		if @product.update(paPRODUCT)       	
+			flash[:success] = "Product was updated"
+			# redirect_to task_path(@task)
+		else
+			render 'edit'
+		end
+    end
+
 	def destroyimage
 		
 		   if params[:product] 
