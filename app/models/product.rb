@@ -1,5 +1,7 @@
 class Product < ApplicationRecord
 	#associate
+
+	has_many_attached :images
 	belongs_to :category
 
 	#validates
