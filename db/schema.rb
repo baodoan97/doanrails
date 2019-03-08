@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2019_03_07_035103) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
@@ -39,7 +40,6 @@ ActiveRecord::Schema.define(version: 2019_03_07_035103) do
   end
 
   create_table "categories", force: :cascade do |t|
-    t.integer "product_id"
     t.string "name"
   end
 
