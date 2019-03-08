@@ -15,3 +15,9 @@
  */
  *= require bootstrap;
 @import "font-awesome";
+.menu{
+	padding: 0;
+}
+.signup {
+	width: 100%;
+}

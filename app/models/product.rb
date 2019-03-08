@@ -1,18 +1,9 @@
-class Product < ApplicationRecord
+class Product < ActiveRecord::Base
 	#associate
-	belongs_to :category
+	belongs_to :category, optional: true
 
 	#validates
 	validates :name, presence: true, uniqueness: true, length: {maximum: 40}
-	validate :description, length: {10..100}
-	enum size: {
-		36: 0,
-		37: 1,
-		38: 2,
-		39: 3,
-		40: 4,
-		41: 5,
-		42: 6,
-		43: 7
-	}
+	validates :description, length: {maximum: 100}
+	validates :category_id, presence: true
 end
