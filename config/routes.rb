@@ -7,7 +7,11 @@ Rails.application.routes.draw do
   get 'signup', to: 'users#new'
   get 'singles/single'
   get 'users/signup'
+
   resources :products, only: [:index, :show] #show = chi tiet
   resources :categories, only: [:show]
   resources :users, except: [:destroy, :index]
+
+
+  delete 'images', to:  'products#destroyimage'
 end
